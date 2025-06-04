@@ -1,11 +1,12 @@
-open class Animal(
+abstract class Animal(
     private val name: String,
     private val age: Int
 ) {
-
-    open fun makeSound() {
-        println("Издать звук")
+    init {
+        require(age >= 0) { "Возраст не может быть отрицательным" }
     }
+
+    abstract fun makeSound()
 
     override fun toString(): String {
         return "Name: $name, Age: $age"
