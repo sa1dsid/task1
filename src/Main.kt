@@ -1,15 +1,3 @@
-fun inputType(): String {
-    while (true) {
-        println("Введите животное(cat/dog):")
-        val animal = readln().lowercase()
-        if (animal != "cat" && animal != "dog") {
-            println("Ошибка: введите cat или dog")
-            continue
-        }
-        return animal
-    }
-}
-
 fun inputData(): Pair<String, Int> {
     while (true) {
         println("Введите имя и возраст вашего животного через пробел:")
@@ -43,30 +31,38 @@ fun inputData(): Pair<String, Int> {
 fun main() {
     val cats = mutableListOf<Cat>()
     val dogs = mutableListOf<Dog>()
+    val parrots = mutableListOf<Parrot>()
 
-    // val testCat = Cat("bob", -1)
+
+    //val testCat = Cat("bob", -1)
 
     while (true) {
-        val type = inputType()
+        //cats.add(testCat)
+        println("Введите животное(cat/dog/parrot):")
+        val type = readln()
         val (name, age) = inputData()
 
-        if (type == "cat") {
-            val cat = Cat(name, age)
-            cats.add(cat)
-        } else {
-            val dog = Dog(name, age)
-            dogs.add(dog)
+
+        val animal = AnimalFactory.create(type, name, age)
+        when (animal) {
+            is Cat -> cats.add(animal)
+            is Dog -> dogs.add(animal)
+            is Parrot -> parrots.add(animal)
         }
+
+
         println("Элементы списка cats")
         for (i in cats) println(i)
         println("Элементы списка dogs")
         for (i in dogs) println(i)
+        println("Элементы списка parrots")
+        for (i in parrots) println(i)
     }
 }
 
 // обработать отрицательный age илегал аргумент исключение +
-// сделать фабрику чтобы было легко расширять ( добавить животное )
+// сделать фабрику чтобы было легко расширять ( добавить животное ) +
 // сделал makesound abstract and class animal abstract +
 // fff 5 fff (проверить ввод) +
 // обращаюсь к несуществующему индексу val age = parts[1].toInt() когда пустой ввод +
-// валидация в конструкторе и при вводе в консоли age +
+// валидация в конструкторе и при вводе в консоли age

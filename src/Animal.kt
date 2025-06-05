@@ -3,12 +3,30 @@ abstract class Animal(
     private val age: Int
 ) {
     init {
-        require(age >= 0) { "Возраст не может быть отрицательным" }
+        require(age >= 0) {"отрицательный age"}
     }
 
     abstract fun makeSound()
 
     override fun toString(): String {
         return "Name: $name, Age: $age"
+    }
+}
+
+object AnimalFactory {
+    fun create(type: String, name: String, age: Int): Animal? {
+        if (age < 0) {
+            println("Ошибка: возраст не может быть отрицательным")
+            return null
+        }
+        return when (type.lowercase()) {
+            "cat" -> Cat(name, age)
+            "dog" -> Dog(name, age)
+            "parrot" -> Parrot(name, age)
+            else -> {
+                println("Такого животного не существует")
+                return null
+            }
+        }
     }
 }
