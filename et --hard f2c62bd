@@ -1,0 +1,10 @@
+[33m2b2e588[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m HEAD@{0}: reset: moving to HEAD
+[33m2b2e588[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m HEAD@{1}: reset: moving to HEAD
+[33m2b2e588[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m HEAD@{2}: rebase (finish): returning to refs/heads/master
+[33m2b2e588[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m HEAD@{3}: rebase (start): checkout 2b2e588239d726692fb49115a0856dfbce87a727
+[33mcec1da1[m HEAD@{4}: rebase (finish): returning to refs/heads/master
+[33mcec1da1[m HEAD@{5}: rebase (start): checkout cec1da15eef9296fd099d44b1517f417697ddb61
+[33mf2c62bd[m HEAD@{6}: commit: Добавил фабрику и новый класс животного
+[33mcec1da1[m HEAD@{7}: commit: Обработал отрицательный и невалидный age
+[33m2b2e588[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m HEAD@{8}: commit: Обработал отрицательный и невалидный age
+[33m5cdb67a[m HEAD@{9}: commit (initial): completed the task
