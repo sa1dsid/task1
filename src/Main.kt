@@ -34,10 +34,10 @@ fun main() {
     val parrots = mutableListOf<Parrot>()
 
 
-    // val testCat = Cat("bob", -1)
+    val testCat = Cat("bob", -1)
 
     while (true) {
-        // cats.add(testCat)
+        cats.add(testCat)
         println("Введите животное(cat/dog/parrot):")
         val type = readln()
         val (name, age) = inputData()

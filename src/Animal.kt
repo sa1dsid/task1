@@ -2,6 +2,9 @@ abstract class Animal(
     private val name: String,
     private val age: Int
 ) {
+    init {
+        require(age >= 0) {"отрицательный age"}
+    }
 
     abstract fun makeSound()
 
